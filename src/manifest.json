@@ -1,25 +1,43 @@
 {
-    "name": "PWA",
+    "name": "My First PWA App",
     "short_name": "MyPWA",
     "start_url": "/index.html",
     "display": "standalone",
+    "orientation": "any",
     "background_color": "#FEFEFE",
     "theme_color": "#333333",
-    "icons": [{
-        "src": "./assets/icons/img/icon-128x128.png",
-        "sizes": "128x128",
+    "description": "whenever you will mark this app as favorite.",
+    "dir": "ltr",
+    "lang": "en-US",
+     "icons": [{
+        "src": "./assets/app-icon-48x48.png",
+        "sizes": "48x48",
         "type": "image/png"
     }, {
-        "src": "./assets/icons/img/icon-152x152.png",
-        "sizes": "152x152",
+        "src": "./assets/app-icon-96x96.png",
+        "sizes": "96x96",
         "type": "image/png"
     }, {
-        "src": "./assets/icons/img/icon-144x144.png",
+        "src": "./assets/app-icon-144x144.png",
         "sizes": "144x144",
         "type": "image/png"
     }, {
-        "src": "./assets/icons/img/icon-192x192.png",
+        "src": "./assets/app-icon-192x192.png",
         "sizes": "192x192",
         "type": "image/png"
-    }]
+    },{
+        "src": "./assets/app-icon-256x256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      },
+      {
+        "src": "./assets/app-icon-384x384.png",
+        "type": "image/png",
+        "sizes": "384x384"
+      },
+      {
+        "src": "./assets/app-icon-512x512.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }]
 }
