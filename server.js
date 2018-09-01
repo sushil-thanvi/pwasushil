@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static(__dirname + '/dist'));
 
 app.get("/mySW.js", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "/dist", "mySW.js"));
+    res.sendFile(path.resolve(__dirname, "/dist", "/mySW.js"));
   });
 app.get('/*', function(req,res) {
     
