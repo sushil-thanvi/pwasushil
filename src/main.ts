@@ -7,6 +7,13 @@ import { environment } from './environments/environment';
 if (environment.production) {
   enableProdMode();
 }
+ 
+platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
+    if ('serviceWorker' in navigator && environment.production) {
+      navigator.serviceWorker.register('/mySW.js').then(function(){
+            console.log('service worker is registered from main.ts ');
+      })
+    }
+  }).catch(err => console.log(err));
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+ 

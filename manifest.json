@@ -5,7 +5,7 @@
     "display": "standalone",
     "orientation": "any",
     "background_color": "#FEFEFE",
-    "theme_color": "#333333",
+    "theme_color": "#00FF00",
     "description": "whenever you will mark this app as favorite.",
     "dir": "ltr",
     "lang": "en-US",
