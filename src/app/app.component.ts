@@ -21,7 +21,11 @@ ngOnInit(){
   });
    
   //button click event to show the promt
-           
+  if (window.matchMedia('(display-mode: standalone)').matches) {
+    console.log('display-mode is standalone');
+    alert('standalone');
+  }  
+  
   window.addEventListener('appinstalled', (event) => {
    alert('installed');
   });
