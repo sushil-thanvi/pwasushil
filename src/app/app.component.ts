@@ -22,7 +22,7 @@ import { Component, OnInit } from '@angular/core';
        "orientation": "any",
        "display": "standalone",
        "description": "Something dynamic",
-       "start_url": "/index.html",
+       "start_url": location.origin + "/index.html",
        "background_color": "#000000",
        "theme_color": "#0f4a73",
        "icons": []
@@ -90,7 +90,7 @@ openManifest1(){
   this.myDynamicManifest['short_name'] = "App One";
   this.myDynamicManifest.icons = [];
   this.myDynamicManifest.icons.push({
-    "src": "./assets/first-256x256.png",
+    "src": location.origin + "/assets/first-256x256.png",
     "sizes": "256x256",
     "type": "image/png"
   });
@@ -98,7 +98,7 @@ openManifest1(){
   let blob = new Blob([stringManifest], {type: 'application/json'});
   let manifestURL = URL.createObjectURL(blob);
   document.querySelector('#my-manifest-placeholder').setAttribute('href', manifestURL);
-  document.querySelector('#my-manifest-placeholder').setAttribute('type', 'application/json');
+  document.querySelector('#my-manifest-placeholder').setAttribute('type', 'application/json*');
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/mySW.js').then(function(){
           console.log('service worker is registered from main.ts ');
