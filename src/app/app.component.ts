@@ -98,7 +98,7 @@ openManifest1(){
   let blob = new Blob([stringManifest], {type: 'application/json'});
   let manifestURL = URL.createObjectURL(blob);
   document.querySelector('#my-manifest-placeholder').setAttribute('href', manifestURL);
-
+  document.querySelector('#my-manifest-placeholder').setAttribute('type', 'application/json');
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('/mySW.js').then(function(){
           console.log('service worker is registered from main.ts ');
@@ -121,7 +121,7 @@ openManifest2(){
   // let blob = new Blob([stringManifest], {type: 'application/json'});
   // let manifestURL = URL.createObjectURL(blob);
   document.querySelector('#my-manifest-placeholder').setAttribute('href', '../manifest.json');
-}
+ }
 
 
 //fetch method provided by default js browser
