@@ -56,6 +56,8 @@ ngOnInit(){
   }).catch(function(err){
     console.log(err);
   });
+
+  this.openManifest1();
   
 }
 
@@ -94,7 +96,15 @@ openManifest1(){
   let blob = new Blob([stringManifest], {type: 'application/json'});
   let manifestURL = URL.createObjectURL(blob);
   document.querySelector('#my-manifest-placeholder').setAttribute('href', manifestURL);
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/mySW.js').then(function(){
+          console.log('service worker is registered from main.ts ');
+    })
+  }
 };
+
+
 
 openManifest2(){
   this.myDynamicManifest['name'] = "Second App";
