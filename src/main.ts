@@ -9,11 +9,11 @@ if (environment.production) {
 }
  
 platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
-    if ('serviceWorker' in navigator && environment.production) {
-      navigator.serviceWorker.register('/mySW.js').then(function(){
-            console.log('service worker is registered from main.ts ');
-      })
-    }
+    // if ('serviceWorker' in navigator && environment.production) {
+    //   navigator.serviceWorker.register('/mySW.js').then(function(){
+    //         console.log('service worker is registered from main.ts ');
+    //   })
+    // }
   }).catch(err => console.log(err));
 
  

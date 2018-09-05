@@ -6,6 +6,6 @@
     console.log('services worker activating', event);
 });
 
-self.addEventListener('fetch',function(event){
-    console.log('services worker fething something', event);
-});
+// self.addEventListener('fetch',function(event){
+//     console.log('services worker fething something', event);
+// });
