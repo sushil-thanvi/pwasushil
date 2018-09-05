@@ -19,6 +19,8 @@ import { Component, OnInit } from '@angular/core';
     this.myDynamicManifest  = {
       // "name": "App first",
        //"short_name": "app1",
+       "orientation": "any",
+       "display": "standalone",
        "description": "Something dynamic",
        "start_url": location.origin + "/index.html",
        "background_color": "#000000",
