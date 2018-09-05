@@ -109,18 +109,18 @@ openManifest1(){
 
 
 openManifest2(){
-  this.myDynamicManifest['name'] = "Second App";
-  this.myDynamicManifest['short_name'] = "App Second";
-  this.myDynamicManifest.icons = [];
-  this.myDynamicManifest.icons.push({
-    "src": location.origin + "/assets/app-icon-256x256.png",
-    "sizes": "256x256",
-    "type": "image/png"
-  });
-  let stringManifest = JSON.stringify(this.myDynamicManifest);
-  let blob = new Blob([stringManifest], {type: 'application/json'});
-  let manifestURL = URL.createObjectURL(blob);
-  document.querySelector('#my-manifest-placeholder').setAttribute('href', manifestURL);
+  // this.myDynamicManifest['name'] = "Second App";
+  // this.myDynamicManifest['short_name'] = "App Second";
+  // this.myDynamicManifest.icons = [];
+  // this.myDynamicManifest.icons.push({
+  //   "src": location.origin + "/assets/app-icon-256x256.png",
+  //   "sizes": "256x256",
+  //   "type": "image/png"
+  // });
+  // let stringManifest = JSON.stringify(this.myDynamicManifest);
+  // let blob = new Blob([stringManifest], {type: 'application/json'});
+  // let manifestURL = URL.createObjectURL(blob);
+  document.querySelector('#my-manifest-placeholder').setAttribute('href', '../manifest.json');
 }
 
 
