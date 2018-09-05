@@ -90,8 +90,38 @@ openManifest1(){
   this.myDynamicManifest['short_name'] = "App One";
   this.myDynamicManifest.icons = [];
   this.myDynamicManifest.icons.push({
-    "src": location.origin + "/assets/first-256x256.png",
+    "src": location.origin + "/assets/app-icon-256x256.png",
     "sizes": "256x256",
+    "type": "image/png"
+  });
+  this.myDynamicManifest.icons.push({
+    "src": location.origin + "/assets/app-icon-384x384.png",
+    "sizes": "384x384",
+    "type": "image/png"
+  });
+  this.myDynamicManifest.icons.push({
+    "src": location.origin + "/assets/app-icon-512x512.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  });
+  this.myDynamicManifest.icons.push({
+    "src": location.origin + "/assets/app-icon-192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  });
+  this.myDynamicManifest.icons.push({
+    "src": location.origin + "/assets/app-icon-144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  });
+  this.myDynamicManifest.icons.push({
+    "src": location.origin + "/assets/app-icon-48x48.png",
+    "sizes": "96x96",
+    "type": "image/png"
+  });
+  this.myDynamicManifest.icons.push({
+    "src": location.origin + "/assets/app-icon-48x48.png",
+    "sizes": "48x48",
     "type": "image/png"
   });
   let stringManifest = JSON.stringify(this.myDynamicManifest);
